@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Load model, encoders, and dataset
 model = joblib.load("model.pkl")
 encoders = joblib.load("encoders.pkl")
-df = pd.read_csv("https://drive.google.com/uc?export=download&id=1Jv_jfmnvSh7E2Aha4qTmHvW90CWWsRBA")
+df = pd.read_csv("cleaned_merged_with_scores.csv", low_memory=False)
 
 # Define features
 FEATURES = ['city', 'province', 'latitude', 'longitude', 'lease_term', 'type', 'beds', 'baths', 'sq_feet',
