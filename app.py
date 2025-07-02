@@ -1,4 +1,4 @@
-eimport pandas as pd
+import pandas as pd
 import joblib
 from flask import Flask, request, jsonify
 from xgboost import XGBRegressor
