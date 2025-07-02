@@ -1,4 +1,4 @@
-import pandas as pd
+eimport pandas as pd
 import joblib
 from flask import Flask, request, jsonify
 from xgboost import XGBRegressor
@@ -11,6 +11,9 @@ encoders = joblib.load("encoders.pkl")
 
 FEATURES = ['city', 'province', 'latitude', 'longitude', 'lease_term', 'type', 'beds', 'baths', 'sq_feet',
             'furnishing', 'availability_date', 'smoking', 'cats', 'dogs', 'Walk Score', 'Bike Score', 'studio']
+@app.route('/')
+def index():
+    return "Welcome to the Housing Price Prediction API. Use POST /predict to get predictions."
 
 @app.route('/predict', methods=['POST'])
 def predict():
