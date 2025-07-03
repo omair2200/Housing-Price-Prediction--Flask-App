@@ -95,7 +95,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <h1>🏠 Housing Rent Price Predictor</h1>
-    <form method="POST">
+<form method="POST" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
         <div class="form-grid">
             <div class="form-group" style="flex: 1 1 100%;">
                 <label>Address (optional – for coordinates)</label>
