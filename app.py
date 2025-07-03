@@ -31,6 +31,8 @@ HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Housing Price Predictor</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 1000px; margin: auto; padding: 2rem; }
@@ -100,7 +102,7 @@ HTML_TEMPLATE = """
             <div class="form-group" style="flex: 1 1 100%;">
                 <label>Address (optional – for coordinates)</label>
                 <input type="text" name="address" id="address">
-                <button type="button" onclick="fetchCoordinates()">Get Coordinates</button>
+<button type="button" onclick="fetchCoordinates()" style="width: 100%; padding: 0.75rem;">Get Coordinates</button>
             </div>
             {% for field in features %}
                 <div class="form-group">
@@ -133,7 +135,7 @@ HTML_TEMPLATE = """
                 </div>
             {% endfor %}
         </div>
-        <button type="submit">Predict Price</button>
+<button type="submit" style="width: 100%; padding: 0.75rem; font-size: 1rem;">Predict</button>
     </form>
 
     {% if result is not none %}
