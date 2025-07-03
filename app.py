@@ -147,6 +147,7 @@ HTML_TEMPLATE = """
 
 @app.route("/", methods=["GET", "POST"])
 def home():
+    filled = {}
     result = None
     if request.method == "POST":
         data = {key: request.form[key] for key in FEATURES}
