@@ -97,6 +97,8 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <h1>🏠 Housing Rent Price Predictor</h1>
+    <div style="max-width: 800px; margin: auto; padding: 1rem;">
+
 <form method="POST" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
         <div class="form-grid">
             <div class="form-group" style="flex: 1 1 100%;">
@@ -137,6 +139,7 @@ HTML_TEMPLATE = """
         </div>
 <button type="submit" style="width: 100%; padding: 0.75rem; font-size: 1rem;">Predict</button>
     </form>
+</div>
 
     {% if result is not none %}
         <div class="result">
