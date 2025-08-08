@@ -44,10 +44,30 @@ HTML_TEMPLATE = """
             border: 1px solid #ccc; box-sizing: border-box;
         }
         button {
-            margin-top: 20px; padding: 12px 25px; font-size: 16px;
-            background-color: #007bff; color: white; border: none; border-radius: 5px;
-            cursor: pointer;
-        }
+    margin-top: 20px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* default desktop size */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* On small screens, make buttons full-width */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+}
+
         .result {
             margin-top: 30px; padding: 20px;
             background-color: #f1f1f1; border-radius: 10px;
